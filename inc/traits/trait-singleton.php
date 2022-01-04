@@ -8,10 +8,10 @@
 namespace THEMINIMAL_THEME\Inc\Traits;
 
 trait Singleton {
-    protected function __constructor() {
+    protected function __construct() {
     }
 
-    final protected function __clone() {}
+    protected function __clone() {}
 
     final public static function get_instance() { //funzione che ritorna istanza classe
         static $instance = []; //Array che contiene istanze

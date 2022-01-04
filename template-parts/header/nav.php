@@ -8,7 +8,14 @@
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <?php
+    if( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { //Stampo il logo se la funzione esiste e se il logo è settato
+        the_custom_logo();
+    } else {
+    ?> <a class="navbar-brand" href="#">Navbar</a> 
+    <?php
+    }
+    ?>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -11,7 +11,7 @@ use THEMINIMAL_THEME\Inc\Traits\Singleton;
 class Assets {
     use Singleton;
 
-    protected function __constructor() {
+    protected function __construct() {
         $this->set_hooks();
     }
 

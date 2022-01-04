@@ -11,14 +11,43 @@ use THEMINIMAL_THEME\Inc\Traits\Singleton;
 class THEMINIMAL_THEME {
     use Singleton;
 
-    protected function __constructor() {
+    protected function __construct() {
         //Carico classi
         Assets::get_instance();
-
         $this->set_hooks();
     }
 
-    protected function setup_hooks() {
-        
+    protected function set_hooks() {
+        add_action( 'after_setup_theme', [ $this, 'setup_theme' ] );
+    }
+
+    public function setup_theme() { 
+        //Lista theme support
+        add_theme_support('title-tag'); //Rendo disponibile la modifica del titolo da parte dell'utente
+        add_theme_support('custom-logo', [
+            'header-text' => [ 'site-title', 'site-description' ],
+            'height' => 100,
+            'width' => 400,
+            'flex-height' => true,
+            'flex-width' => true
+        ]); //Rendo disponibile la possibilità di aggiungere un logo personalizzato
+        add_theme_support( 'post-thumbnails' ); //Rendo disponibile il caricamento di thumbnails
+        add_theme_support( 'customize-selective-refresh-widgets' ); //Rendo disponibile il caricamento di thumbnails
+        add_theme_support( 'html5', [
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+            'script',
+            'style',
+        ] ); //Rendo disponibile il caricamento di thumbnails
+        add_theme_support( 'align-wide' ); //Aggiunge impostazioni di allineamento nell'editor
+
+        //Setto larghezza massima contenuto
+        global $content_width;
+        if( !isset($content_width) ) {
+            $content_width = 1200;
+        }
     }
 }
