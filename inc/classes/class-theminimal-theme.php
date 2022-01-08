@@ -14,6 +14,8 @@ class THEMINIMAL_THEME {
     protected function __construct() {
         //Carico classi
         Assets::get_instance();
+        Menus::get_instance();
+
         $this->set_hooks();
     }
 
