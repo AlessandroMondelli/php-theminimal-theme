@@ -29,8 +29,10 @@ class Menus {
 
     public function get_menu_id( $location ) { //Funzione che prende l'id del menu
         $locations = get_nav_menu_locations(); //Prendo tutte le location
-
-        $menu_id = $locations[$location]; //Prendo l'id del menu tramite la location
+        
+        if( isset($locations[$location]) ) { //Controllo se il menu è assegnato
+            $menu_id = $locations[$location]; //Prendo l'id del menu tramite la location
+        }
 
         return !empty( $menu_id ) ? $menu_id : ''; //Ritorno l'id del menu se non è un valore vuoto
     }
