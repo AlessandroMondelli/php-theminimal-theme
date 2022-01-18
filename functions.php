@@ -10,6 +10,7 @@ if( !defined( 'THEMINIMAL_DIR_PATH' ) ) { //Se la costante con la path della dir
 }
 
 require_once THEMINIMAL_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once THEMINIMAL_DIR_PATH . '/inc/helpers/template-tags.php';
 
 
 if( !defined( 'THEMINIMAL_DIR_URI' ) ) { //Se la costante con l'uri della directory non è ancora definito

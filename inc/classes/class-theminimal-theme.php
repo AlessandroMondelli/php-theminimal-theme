@@ -33,7 +33,10 @@ class THEMINIMAL_THEME {
             'flex-height' => true,
             'flex-width' => true
         ]); //Rendo disponibile la possibilità di aggiungere un logo personalizzato
+        
         add_theme_support( 'post-thumbnails' ); //Rendo disponibile il caricamento di thumbnails
+        add_image_size( 'theminimal-thumbnail-size', 350, 233, true ); //Inserisco grandezza massima immagini in blog
+
         add_theme_support( 'customize-selective-refresh-widgets' ); //Rendo disponibile il caricamento di thumbnails
         add_theme_support( 'html5', [
             'search-form',

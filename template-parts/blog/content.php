@@ -1,13 +1,17 @@
 <?php
 /**
- * Post content template
+ * Post template
  * 
  * @package theminimal
  */
 
 ?>
 
-<div class="theminimal-single-post">
-    <h2><?php the_title() ?></h2>
-    <p><?php the_excerpt() ?></p>
-</div>
+<article id="<?php the_ID() ?>" class="theminimal-single-post">
+    <?php
+        get_template_part( 'template-parts/blog/components/entry-header' );
+        get_template_part( 'template-parts/blog/components/entry-meta' );
+        get_template_part( 'template-parts/blog/components/entry-content' );
+        get_template_part( 'template-parts/blog/components/entry-footer' );
+    ?>
+</article>
