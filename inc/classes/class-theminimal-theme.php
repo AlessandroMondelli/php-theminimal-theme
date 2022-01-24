@@ -15,6 +15,7 @@ class THEMINIMAL_THEME {
         //Carico classi
         Assets::get_instance();
         Menus::get_instance();
+        Meta_Boxes::get_instance();
 
         $this->set_hooks();
     }
