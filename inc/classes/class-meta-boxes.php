@@ -54,7 +54,9 @@ Class Meta_Boxes {
             return;
         }
         
-        $nonce_ver = wp_verify_nonce( $_POST['hide_title_meta_box_nonce'], plugin_basename(__FILE__) ); //verifico validità nonce
+        if( !isset( $_POST['hide_title_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['hide_title_meta_box_nonce'], plugin_basename(__FILE__) ) ) { //verifico validità nonce
+            return; //Se non ricevo valori in POST o il nonce non è valido, ritorno nulla dalla funzione
+        }
 
         if( array_key_exists( 'theminimal-hide-title-radio', $_POST ) ) {
             update_post_meta(

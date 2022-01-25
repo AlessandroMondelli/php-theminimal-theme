@@ -31,12 +31,23 @@ $hide_title = get_post_meta( $post_id, '_hide_page_title', true );
     ?>
 
     <?php
-        if($hide_title != "yes") {
+        //Setto il titolo
+        if( is_single() || is_page() ) { //Se è un post o pagina
+            if( $hide_title != 'yes' ) {
     ?>
-            <div class="theminimal-post-title">
-                <h2><?php the_title(); ?></h2>
-            </div>
+                <div class="theminimal-main-title">
+                    <h1><a href="<?php echo esc_url( get_the_permalink() ) ?>" class="text-dark"><?php wp_kses_post( the_title() ); //Stampo titolo h1 ?></a></h1>
+                </div>
     <?php
+            }
+        } else { //Se è titolo di un post nel blog
+            if( $hide_title != 'yes' ) {
+    ?>
+                <div class="theminimal-post-title">
+                    <h2><a href="<?php echo esc_url( get_the_permalink() ) ?>" class="text-dark"><?php wp_kses_post( the_title() ); //Stampo titolo h2 ?></a></h2>
+                </div>
+    <?php
+            }
         }
     ?>
 </div>  
