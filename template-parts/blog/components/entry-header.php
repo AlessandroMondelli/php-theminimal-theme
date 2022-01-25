@@ -31,7 +31,7 @@ $hide_title = get_post_meta( $post_id, '_hide_page_title', true );
     ?>
 
     <?php
-        if($hide_title != "no") {
+        if($hide_title != "yes") {
     ?>
             <div class="theminimal-post-title">
                 <h2><?php the_title(); ?></h2>
