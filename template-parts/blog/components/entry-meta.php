@@ -8,5 +8,9 @@
 ?>
 
 <div class="theminimal-post-meta">
-    <?php theminimal_posted_on(); ?>
+    <?php 
+        //Richiamo funzioni che stampano data di creazione e autore post
+        theminimal_posted_on(); 
+        theminimal_posted_by();
+    ?>
 </div>

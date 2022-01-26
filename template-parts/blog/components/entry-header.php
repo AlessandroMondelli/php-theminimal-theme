@@ -7,7 +7,7 @@
 
 $post_id = get_the_ID(); //Recupero id del post
 $post_thumbnail = get_the_post_thumbnail( $post_id ); //Recupero thumbnail post
-$hide_title = get_post_meta( $post_id, '_hide_page_title', true );
+$hide_title = get_post_meta( $post_id, '_hide_page_title', true ); //Verifico se il titolo è stato nascosto o meno
 ?>
 
 <div class="theminimal-post-header">
