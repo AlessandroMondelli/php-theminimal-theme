@@ -22,6 +22,10 @@ get_header(); //Recupero header
                 get_template_part( 'template-parts/blog/content' );
             endwhile;
         }
+        
+        //Post precedente e successivo
+        previous_post_link();
+        next_post_link();
     ?>
 </div>
 

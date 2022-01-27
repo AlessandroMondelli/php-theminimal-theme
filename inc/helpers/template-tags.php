@@ -83,7 +83,7 @@ function theminimal_the_excerpt( $trim_count = 0 ) { //Funzione che recupera est
     echo $excerpt . '...';
 }
 
-function theminimal_excerpt_more( $read_more = '' ) {
+function theminimal_excerpt_more( $read_more = '' ) { //Funzione che stampa il pulsante "continua a leggere" dopo l'estratto
     if( !is_single() ) {
         $read_more = sprintf(
             '<span class="theminimal-read-more"><a href="%1$s">%2$s</a></span>',
@@ -93,4 +93,32 @@ function theminimal_excerpt_more( $read_more = '' ) {
     }
 
     echo $read_more;
+}
+
+function theminimal_blog_pagination() {
+    //Definisco tag html permessi per wp_kses()
+    $allowed_tags = [
+        'span' => [
+            'class' => []
+        ],
+        'a' => [
+            'class' => [],
+            'href' => []
+        ]
+    ];
+
+    //Definisco argomenti per paginate_links()
+    $args = [
+        'before_page_number' => '<span class="theminimal-blog-before-page">',
+        'after_page_number' => '</span>'
+    ];
+
+    //Stampo paginazione
+    printf( 
+        '<div class="theminimal-single-pagination">%s</div>',
+        wp_kses(
+            paginate_links( $args ),
+            $allowed_tags
+        )
+    );
 }

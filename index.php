@@ -44,6 +44,8 @@ get_header();
     </div> 
   <?php
     }
+
+    theminimal_blog_pagination(); //Richiamo funzione paginazione blog
   ?>
 </div>
 
