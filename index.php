@@ -24,6 +24,11 @@ get_header();
         }
       ?>
       <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-12">
+          <?php get_sidebar(); ?>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-12">
+          <div class="row">
       <?php
         if( have_posts() ) { //Se trovo post, con the loop mostro tutti i post
           while( have_posts() ) : the_post();
@@ -31,7 +36,6 @@ get_header();
             <div class="col-lg-4 col-md-6 col-sm-12">
               <?php
               get_template_part( 'template-parts/blog/content' );
-            
       ?>
             </div>
       <?php
@@ -40,6 +44,8 @@ get_header();
           get_template_part( 'template-parts/blog/content-none' );  
         }
       ?>
+          </div>
+      </div>
       </div>
     </div> 
   <?php
