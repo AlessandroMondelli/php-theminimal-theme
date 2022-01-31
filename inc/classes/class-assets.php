@@ -23,7 +23,7 @@ class Assets {
 
     public function register_styles() { //Funzione che registra stili
         //Registro stili
-        wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime(THEMINIMAL_DIR_PATH . '/style.css'), 'all' );
+        wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime(THEMINIMAL_BUILD_CSS_DIR_PATH . '/style.css'), 'all' );
         wp_register_style( 'bootstrap-css', THEMINIMAL_DIR_URI . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
 
         //enqueue stili
@@ -33,7 +33,7 @@ class Assets {
 
     public function register_scripts() { //Funzione che registra scripts
         //Registro script
-        wp_register_script( 'main-js', THEMINIMAL_DIR_URI . '/assets/main.js', [], filemtime(get_template_directory() . '/assets/main.js'), true );
+        wp_register_script( 'main-js', THEMINIMAL_BUILD_JS_URI . '/assets/main.js', [], filemtime(THEMINIMAL_BUILD_JS_DIR_PATH . '/main.js'), true );
         wp_register_script( 'bootstrap-js', THEMINIMAL_DIR_URI . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true);
 
         //enqueue scripts
