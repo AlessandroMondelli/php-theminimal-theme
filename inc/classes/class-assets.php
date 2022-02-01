@@ -23,12 +23,14 @@ class Assets {
 
     public function register_styles() { //Funzione che registra stili
         //Registro stili
-        wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime(THEMINIMAL_BUILD_CSS_DIR_PATH . '/style.css'), 'all' );
+        wp_register_style( 'style-css', get_stylesheet_uri(), [], filemtime(THEMINIMAL_DIR_PATH . '/style.css'), 'all' );
         wp_register_style( 'bootstrap-css', THEMINIMAL_DIR_URI . '/assets/src/library/css/bootstrap.min.css', [], false, 'all' );
+        wp_register_style( 'main-css', THEMINIMAL_BUILD_CSS_URI . '/main.css', [ 'bootstrap-css' ], filemtime(THEMINIMAL_BUILD_CSS_DIR_PATH . '/main.css'), 'all' );
 
         //enqueue stili
         wp_enqueue_style( 'style-css' );
         wp_enqueue_style( 'bootstrap-css' );
+        wp_enqueue_style( 'main-css' );
     }
 
     public function register_scripts() { //Funzione che registra scripts

@@ -31,6 +31,7 @@ const rules = [
         use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
+            'sass-loader'
         ]
     },
     {
@@ -51,6 +52,9 @@ const plugins = (argv) => [
     new CleanWebpackPlugin({
         cleanStaleWebpackAssets: ( argv.mode === 'production' ? true : false )
     }),
+    new MiniCssExtractPlugin( {
+        filename: 'css/[name].css'
+    } ),
 ]
 
 module.exports = ( env, argv ) => ({
