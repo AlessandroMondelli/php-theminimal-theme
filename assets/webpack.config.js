@@ -2,7 +2,6 @@ const path = require( 'path' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );
 const MinimizerWebpackPlugin = require( 'css-minimizer-webpack-plugin' );
-const cssnano = require( 'cssnano' );
 
 const JS_DIR = path.resolve( __dirname, 'src/js' );
 const IMG_DIR = path.resolve( __dirname, 'src/img' );
@@ -26,7 +25,7 @@ const rules = [
         use: 'babel-loader',
     },
     {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
             MiniCssExtractPlugin.loader,
@@ -35,7 +34,7 @@ const rules = [
         ]
     },
     {
-        test: /\.(png|jpg|svg|jpeg|gif|ico)/,
+        test: /\.(png|jpg|svg|jpeg|gif|ico)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -66,7 +65,7 @@ module.exports = ( env, argv ) => ({
     },
     optimization: {
         minimizer: [
-            new MinimizerWebpackPlugin (),
+            new MinimizerWebpackPlugin(),
         ]
     },
     plugins: plugins(argv),
