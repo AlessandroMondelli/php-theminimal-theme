@@ -30,7 +30,7 @@ class THEMINIMAL_THEME {
         add_theme_support('title-tag'); //Rendo disponibile la modifica del titolo da parte dell'utente
         add_theme_support('custom-logo', [
             'header-text' => [ 'site-title', 'site-description' ],
-            'height' => 100,
+            'height' => 200,
             'width' => 400,
             'flex-height' => true,
             'flex-width' => true

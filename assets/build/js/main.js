@@ -2,6 +2,17 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/img/default_thumbnail.png":
+/*!***************************************!*\
+  !*** ./src/img/default_thumbnail.png ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("../src/img/default_thumbnail.png");
+
+/***/ }),
+
 /***/ "./src/sass/main.scss":
 /*!****************************!*\
   !*** ./src/sass/main.scss ***!
@@ -61,7 +72,10 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
+/* harmony import */ var _img_default_thumbnail_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/default_thumbnail.png */ "./src/img/default_thumbnail.png");
 //styles
+ //img
+
 
 }();
 /******/ })()

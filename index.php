@@ -9,11 +9,11 @@
 get_header();
 ?>
 
-<div id="theminimal-blog-main">
+<div id="theminimal-blog-main" class="theminimal-page-margin">
   <?php
     if( have_posts() ) {
   ?>
-    <div class="container">
+    <div class="container-fluid">
       <?php
         if( is_home() && !is_front_page() ) {
       ?>
@@ -24,20 +24,21 @@ get_header();
         }
       ?>
       <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-12">
+        <div class="col-lg-3 col-md-3 col-sm-12">
           <?php get_sidebar(); ?>
         </div>
-        <div class="col-lg-10 col-md-9 col-sm-12">
+        <div class="col-lg-9 col-md-9 col-sm-12">
           <div class="row">
       <?php
         if( have_posts() ) { //Se trovo post, con the loop mostro tutti i post
           while( have_posts() ) : the_post();
       ?>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-12">
               <?php
               get_template_part( 'template-parts/blog/content' );
       ?>
             </div>
+            <hr class="theminimal-separator">
       <?php
           endwhile;
         } else { //Altrimenti richiamo template per nessun contenuto
@@ -45,7 +46,7 @@ get_header();
         }
       ?>
           </div>
-      </div>
+        </div>
       </div>
     </div> 
   <?php

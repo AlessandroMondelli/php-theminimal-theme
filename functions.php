@@ -26,7 +26,7 @@ if( !defined( 'THEMINIMAL_BUILD_JS_DIR_PATH' ) ) { //Se la costante con la path 
 }
 
 if( !defined( 'THEMINIMAL_BUILD_IMG_URI' ) ) { //Se la costante con la path della directory non è ancora definito
-    define( 'THEMINIMAL_BUILD_IMG_URI', untrailingslashit( get_template_directory() ) . '/assets/build/src/img' ); //Definisco costante
+    define( 'THEMINIMAL_BUILD_IMG_URI', untrailingslashit( get_template_directory_uri() ) . '/assets/build/src/img' ); //Definisco costante
 }
 
 if( !defined( 'THEMINIMAL_BUILD_CSS_URI' ) ) { //Se la costante con la path della directory non è ancora definito

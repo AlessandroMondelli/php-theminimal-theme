@@ -1,0 +1,31 @@
+.theminimal-single-post {
+    display: flex;
+    align-items: baseline;
+}
+
+.theminimal-post-thumbnail {
+    margin: $thumbnail-margin;
+}
+
+.no-thumbnail a img{
+    @include thumbnail-size;
+}
+
+.theminimal-post-title {
+    margin-bottom: $min-margin;
+}
+
+.post-term {
+    font-size: $secondary-size;
+    font-weight: $light-weigth;
+}
+
+.theminimal-read-more {
+    font-size: $secondary-size;
+    color: $second-font-color;
+}
+
+.theminimal-separator {
+    width: 30%;
+    margin: 25px auto 0;
+}

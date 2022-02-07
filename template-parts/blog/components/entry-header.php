@@ -11,24 +11,32 @@ $hide_title = get_post_meta( $post_id, '_hide_page_title', true ); //Verifico se
 ?>
 
 <div class="theminimal-post-header">
+    <div class="theminimal-post-thumbnail">
     <?php
         if( $post_thumbnail ) {
+    ?> 
+            <a href="<?php echo esc_url( get_permalink() ) ?>">
+                <?php
+                    the_post_custom_thumbnail(
+                        'theminimal-thumbnail-size',
+                        [
+                            'class' => 'attachment-featured-large size-featured-image'
+                        ]
+                    )
+                ?>  
+            </a>
+    <?php
+        } else {
     ?>
-            <div class="theminimal-post-thumbnail">
+            <div class="no-thumbnail">  
                 <a href="<?php echo esc_url( get_permalink() ) ?>">
-                    <?php
-                        the_post_custom_thumbnail(
-                            'theminimal-thumbnail-size',
-                            [
-                                'class' => 'attachment-featured-large size-featured-image'
-                            ]
-                        )
-                    ?>  
+                    <img src="<?php echo THEMINIMAL_BUILD_IMG_URI . '/default_thumbnail.png'?>">  
                 </a>
             </div>
     <?php
-        }    
-    ?>
+        }
+    ?>  
+    </div>
 
     <?php
         //Setto il titolo
