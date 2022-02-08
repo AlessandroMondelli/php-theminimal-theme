@@ -13,12 +13,14 @@ $header_menu_id = $menu_class->get_menu_id( 'theminimal-header-menu' ); //Richia
 $header_menu_list = wp_get_nav_menu_items( $header_menu_id ); //Prendo voci di menu tramite funzione wp
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
     <?php
     if( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { //Stampo il logo se la funzione esiste e se il logo è settato
-        the_custom_logo();
+    ?>
+        <a href="<?php echo get_home_url(); ?>"><?php the_custom_logo(); ?></a>
+    <?php
     } else {
-    ?> <a class="navbar-brand" href="#">Navbar</a> 
+    ?> <a class="navbar-brand" href="<?php echo get_home_url(); ?>">Navbar</a> 
     <?php
     }
     ?>

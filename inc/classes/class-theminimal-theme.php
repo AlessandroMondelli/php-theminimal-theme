@@ -50,11 +50,13 @@ class THEMINIMAL_THEME {
             'style',
         ] ); //Rendo disponibile il caricamento di thumbnails
         add_theme_support( 'align-wide' ); //Aggiunge impostazioni di allineamento nell'editor
+        
+        //Aggiungo stile personalizzato ad editor @todo creare stile
+        add_editor_style();
 
-        //Setto larghezza massima contenuto
-        global $content_width;
-        if( !isset($content_width) ) {
-            $content_width = 1200;
-        }
+        //Aggiungo supporto a blocchi
+        add_theme_support( 'wp-block-styles' );
+
+        
     }
 }
