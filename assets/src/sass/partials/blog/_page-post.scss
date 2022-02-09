@@ -7,7 +7,7 @@
     margin: $thumbnail-margin;
 }
 
-.no-thumbnail a img{
+.no-thumbnail a img {
     @include thumbnail-size;
 }
 
@@ -17,7 +17,7 @@
 
 .post-term {
     font-size: $secondary-size;
-    font-weight: $light-weigth;
+    font-weight: $thin;
 }
 
 .theminimal-read-more {

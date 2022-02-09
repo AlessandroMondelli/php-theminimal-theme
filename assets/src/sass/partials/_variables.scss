@@ -1,6 +1,20 @@
+//Sizes
+$h1-size: 42px;
+$h2-size: 36px;
+$h3-size: 32px;
+$h4-size: 28px;
+
 //Colors
 $first-font-color: #000000;
 $second-font-color: #666666;
+$first-color: #000000;
+$second-color: #666666;
+
+$buttons-font-color: #FFFFFF;
+$buttons-hover-font-color: #000000;
+$caption-font-color: rgba(102, 102, 102, 0.5);
+
+$hr-color: rgba(102, 102, 102, 0.8);
 
 $nav-background: #F8F9FA;
 
@@ -10,12 +24,21 @@ $mid-margin: 50px;
 
 $page-default-margin: 35px 0 65px;
 $thumbnail-margin: 0 150px 15px 0;
+$blockquote-margin: 15px 0 15px 0;
+
+//Paddings
+$regular-padding: 10px 8px;
 
 //Font size
 $secondary-size: 14px;
 
-//Font weigth
-$light-weigth: 300;
+//Font
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$bolder: 800;
+
+$regular-size: 16px;
 
 //Width
 $container-width: 85%;
