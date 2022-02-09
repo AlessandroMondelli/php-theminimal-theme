@@ -49,10 +49,14 @@ class THEMINIMAL_THEME {
             'script',
             'style',
         ] ); //Rendo disponibile il caricamento di thumbnails
+        
         add_theme_support( 'align-wide' ); //Aggiunge impostazioni di allineamento nell'editor
         
+        //Aggiungo possibilità di customizzare editor
+        add_theme_support('editor-styles');
+
         //Aggiungo stile personalizzato ad editor @todo creare stile
-        add_editor_style();
+        add_editor_style('assets/build/css/editor.css');
 
         //Aggiungo supporto a blocchi
         add_theme_support( 'wp-block-styles' );

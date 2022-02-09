@@ -1,0 +1,50 @@
+blockquote, q, blockquote.wp-blockquote {
+    quotes: "" "";
+    border-left: 0.5px solid $second-color;
+    font-style: italic;
+    font-weight: $normal;
+    margin: $blockquote-margin;
+    padding-left: $min-margin;
+}
+
+.wp-block-image {
+    &.size-medium,
+    &.size-thumbnail,
+    &.is-resized {
+        img {
+            width: auto;
+        }
+    }
+
+    figcaption {
+        text-align: left;
+        padding: $regular-padding;
+        border-left: 1px solid $second-color;
+    }
+}
+
+.wp-block-button {
+    .wp-block-button__link {
+        border-radius: 0;
+        font-weight: $bold;
+        font-size: $regular-size;
+        padding: $regular-padding;
+        background-color: $first-color;
+        color: $buttons-font-color;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $second-color;
+            color: $buttons-hover-font-color;
+        }
+    }
+}
+
+.wp-block-separator {
+    margin: $mid-margin auto;
+    border: 0.5px solid $hr-color;
+
+    &:not(.is-style-wide):not(.is-style-dots) {
+        width: 10%;
+    }
+}

@@ -45,3 +45,11 @@ function theminimal_get_theme_instance() { //Funzione che prende istanza classe 
 }
 
 theminimal_get_theme_instance();
+
+//Rimuovo CSS Gutenberg
+function theminimal_remove_block_styles() {
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+}
+
+add_action( 'wp_enqueue_scripts', 'theminimal_remove_block_styles' );
