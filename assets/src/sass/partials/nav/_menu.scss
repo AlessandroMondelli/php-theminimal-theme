@@ -3,4 +3,58 @@ header#theminimal-header {
     height: $navbar-height;
     display: flex;
     align-items: center;
+
+
+
+    .nav-item {
+        margin-left: 10px;
+
+        &.dropdown {
+        position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 2px;
+                left: 8px;
+                width: 50%;
+                border-bottom: 0.5px solid $submenu-border-color;
+            }
+
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+            .dropdown-menu {
+                background-color: $submenu-background-color;
+                border: none;
+                border-radius: 0;
+                font-size: $dropdown-size;
+                left: 8px;
+
+                .dropdown-item {
+
+                    &:hover {
+                        background-color: $submenu-background-color-hover;
+                        color: $submenu-font-color-hover;
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            &:hover {
+                color: $menu-color-hover;
+            }
+
+            &.current {
+                color: $menu-color-active;
+                font-weight: $normal;
+            }
+
+            &.dropdown-hover {
+                color: $menu-color-hover;
+            }
+        }
+    }
 }

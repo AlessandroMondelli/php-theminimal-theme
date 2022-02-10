@@ -1,4 +1,4 @@
-@mixin thumbnail-size {
-  width: $thumbnail-width;
-  height: $thumbnail-heigth;
+@mixin thumbnail-size($thumbnail-width, $thumbnail-heigth) {
+  max-width: $thumbnail-width;
+  max-height: $thumbnail-heigth;
 }

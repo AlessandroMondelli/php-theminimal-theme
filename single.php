@@ -8,7 +8,7 @@
 get_header(); //Recupero header
 ?>
 
-<div id="theminimal-single-post" class="container-fluid">
+<div id="theminimal-single-post" class="container-fluid page-margin">
     <?php
         if( have_posts() ) {
             if( is_home() && !is_front_page()) {   

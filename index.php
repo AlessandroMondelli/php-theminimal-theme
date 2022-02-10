@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-<div id="theminimal-blog-main" class="theminimal-page-margin">
+<div id="theminimal-blog-main" class="page-margin">
   <?php
     if( have_posts() ) {
   ?>

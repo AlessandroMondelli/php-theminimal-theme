@@ -33,7 +33,7 @@ class Assets {
 
     public function register_scripts() { //Funzione che registra scripts
         //Registro script
-        wp_register_script( 'main-js', THEMINIMAL_BUILD_JS_URI . '/assets/main.js', [], filemtime(THEMINIMAL_BUILD_JS_DIR_PATH . '/main.js'), true );
+        wp_register_script( 'main-js', THEMINIMAL_BUILD_JS_URI . '/main.js', [], filemtime(THEMINIMAL_BUILD_JS_DIR_PATH . '/main.js'), true );
         wp_register_script( 'bootstrap-js', THEMINIMAL_DIR_URI . '/assets/src/library/js/bootstrap.min.js', ['jquery'], false, true);
 
         //enqueue scripts

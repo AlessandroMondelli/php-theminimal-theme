@@ -7,7 +7,7 @@
 ?>
 
     <hr>
-    <footer id="theminimal-footer">
+    <footer id="theminimal-footer" class="container-fluid page-margin">
         <h2>Footer Tema</h2>
         <?php
             if( is_active_sidebar( 'sidebar-2' ) ) {

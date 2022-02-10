@@ -14,13 +14,14 @@ $header_menu_list = wp_get_nav_menu_items( $header_menu_id ); //Prendo voci di m
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+    
     <?php
     if( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { //Stampo il logo se la funzione esiste e se il logo è settato
     ?>
         <a href="<?php echo get_home_url(); ?>"><?php the_custom_logo(); ?></a>
     <?php
     } else {
-    ?> <a class="navbar-brand" href="<?php echo get_home_url(); ?>">Navbar</a> 
+    ?> <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a> 
     <?php
     }
     ?>
@@ -38,17 +39,21 @@ $header_menu_list = wp_get_nav_menu_items( $header_menu_id ); //Prendo voci di m
                 if( !$menu_item->menu_item_parent ) { //Se è un valore padre
                     $child_menu_items = $menu_class->get_menu_child_items( $header_menu_list, $menu_item->ID ); //Richiamo funzione per recuperare figli
                     $has_children = !empty( $child_menu_items ) && is_array( $child_menu_items ); //Variabile booleana che controlla se ci sono figli
+                    
+                    $current = ( $menu_item->object_id == get_queried_object_id() ) ? 'current' : '';
 
                     if(!$has_children) { //Se non ci sono figli
+                        //certo pagina corrente
+                        
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo esc_url($menu_item->url) ?>"><?php echo esc_html($menu_item->title) ?></a>
+                        <a class="nav-link <?php if($current == 'current') echo $current ?>" href="<?php echo esc_url($menu_item->url) ?>"><?php echo esc_html($menu_item->title) ?></a>
                     </li>
                     <?php
                     } else {
                     ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="<?php echo esc_url($menu_item->url) ?>" data-bs-toggle="dropdown" aria-expanded="false"><?php echo esc_html($menu_item->title) ?></a>
+                        <a class="nav-link dropdown-toggle <?php if($current == 'current') echo $current ?>" href="<?php echo esc_url($menu_item->url) ?>" data-bs-toggle="dropdown" aria-expanded="false"><?php echo esc_html($menu_item->title) ?></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php
                             foreach( $child_menu_items as $child_item ){
