@@ -9,6 +9,7 @@ $first-font-color: #000000;
 $second-font-color: #666666;
 $first-color: #000000;
 $second-color: #666666;
+$second-color-transparent: rgba(102, 102, 102, 0.2);
 
 $menu-color-active: rgba(0,0,0,.9);
 $menu-color-hover: $menu-color-active;
@@ -30,10 +31,12 @@ $min-margin: 10px;
 $mid-margin: 50px;
 
 $page-default-margin: 35px auto 65px;
+$post-default-margin: 50px auto 50px;
 $thumbnail-margin: 0 150px 15px 0;
 $blockquote-margin: 15px 0 15px 0;
 
 //Paddings
+$min-padding: 5px 3px;
 $regular-padding: 10px 8px;
 
 //Font size

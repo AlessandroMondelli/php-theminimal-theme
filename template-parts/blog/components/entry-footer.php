@@ -14,7 +14,7 @@ if( empty( $post_terms ) || !is_array( $post_terms ) ) { //Se non ci sono terms 
 }
 ?>
 
-<div class="theminimal-post-footer">
+<div class="theminimal-post-tags">
     <?php
         foreach( $post_terms as $key => $post_term ) { //Scorro terms trovati
     ?>

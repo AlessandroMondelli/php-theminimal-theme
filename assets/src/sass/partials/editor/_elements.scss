@@ -39,7 +39,7 @@ blockquote, q, blockquote.wp-blockquote {
 
         &:hover {
             background-color: $second-color;
-            color: $buttons-hover-font-color;
+            cursor: pointer;
         }
     }
 }
