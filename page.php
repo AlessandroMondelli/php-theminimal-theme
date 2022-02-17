@@ -9,7 +9,9 @@ get_header(); //Recupero header
 ?>
 
 <div id="theminimal-page" class="container-fluid page-margin">
-    <h1>Page</h1>
+    <?php
+        get_template_part( 'template-parts/page/page-content' );
+    ?>
 </div>
 
 <?php
