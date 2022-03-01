@@ -3,57 +3,74 @@ header#theminimal-header {
     height: $navbar-height;
     display: flex;
     align-items: center;
+    transition: 0.2s;
+
+    &.scrolled {
+        height: $nav-scrolled-heigth;
+        font-size: $nav-scrolled-font;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
 
+    .navbar-collapse {
 
-    .nav-item {
-        margin-left: 10px;
+        &.scrolled {
+            justify-content: center;
+        }
 
-        &.dropdown {
-        position: relative;
+        .nav-item {
+            margin-left: 10px;
 
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 2px;
-                left: 8px;
-                width: 50%;
-                border-bottom: 0.5px solid $submenu-border-color;
-            }
+            &.dropdown {
+            position: relative;
 
-            .dropdown-toggle::after {
-                display: none;
-            }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 2px;
+                    left: 8px;
+                    width: 50%;
+                    border-bottom: 0.5px solid $submenu-border-color;
+                }
 
-            .dropdown-menu {
-                background-color: $submenu-background-color;
-                border: none;
-                border-radius: 0;
-                font-size: $dropdown-size;
-                left: 8px;
+                .dropdown-toggle::after {
+                    display: none;
+                }
 
-                .dropdown-item {
+                .dropdown-menu {
+                    background-color: $submenu-background-color;
+                    border: none;
+                    border-radius: 0;
+                    font-size: $dropdown-size;
+                    left: 8px;
 
-                    &:hover {
-                        background-color: $submenu-background-color-hover;
-                        color: $submenu-font-color-hover;
+                    .dropdown-item {
+
+                        &:hover {
+                            background-color: $submenu-background-color-hover;
+                            color: $submenu-font-color-hover;
+                        }
                     }
                 }
             }
-        }
 
-        .nav-link {
-            &:hover {
-                color: $menu-color-hover;
-            }
+            .nav-link {
+                &:hover {
+                    color: $menu-color-hover;
+                }
 
-            &.current {
-                color: $menu-color-active;
-                font-weight: $normal;
-            }
+                &.current {
+                    color: $menu-color-active;
+                    font-weight: $normal;
+                }
 
-            &.dropdown-hover {
-                color: $menu-color-hover;
+                &.dropdown-hover {
+                    color: $menu-color-hover;
+                }
             }
         }
     }

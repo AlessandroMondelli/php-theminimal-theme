@@ -1,0 +1,15 @@
+.theminimal-404 {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .inner-404 {
+    
+        h1 {
+            font-size: 52px;
+            font-weight: bold;
+        }
+    }
+}

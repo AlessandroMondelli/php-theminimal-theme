@@ -17,4 +17,17 @@ jQuery(function($) {
     $('.dropdown-menu').mouseleave(function() {
         $(this).siblings('.nav-link').removeClass('dropdown-hover');
     });
+
+    $(window).scroll(function(){
+        var hTop = $('#theminimal-header').height();
+        if($(this).scrollTop() >= hTop){
+            $('#theminimal-header').addClass('scrolled');
+            $('.navbar-brand').hide();
+            $('.navbar-collapse').addClass('scrolled');
+        } else {
+            $('#theminimal-header').removeClass('scrolled');
+            $('.navbar-brand').show();
+            $('.navbar-collapse').removeClass('scrolled');
+        }
+    });
 });
