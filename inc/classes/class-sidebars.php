@@ -35,9 +35,9 @@ class Sidebars {
 
         register_sidebar(
             [
-                'name' => __( 'Footer Sidebar', 'theminimal' ),
+                'name' => __( 'Footer Sidebar 1', 'theminimal' ),
                 'id' => 'sidebar-2',
-                'description' => __( 'Footer sidebar', 'theminimal' ),
+                'description' => __( 'Footer sidebar 1', 'theminimal' ),
                 'before_widget' => '<div id="%1$s" class="theminimal-footer-widget %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="theminimal-footer-widget-title>',

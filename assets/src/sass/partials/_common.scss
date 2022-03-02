@@ -4,6 +4,10 @@
     clear: both;
 }
 
+header {
+    margin: 0 0 $mid-margin 0;
+}
+
 h1 {
     font-size: $h1-size;
     margin-bottom: $min-margin;
@@ -60,5 +64,9 @@ a {
 .prev-next {
     display: flex;
     justify-content: space-between;
+}
+
+footer {
+    margin: $mid-margin 0 0 0;
 }
 

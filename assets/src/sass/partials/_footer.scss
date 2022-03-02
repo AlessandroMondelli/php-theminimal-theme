@@ -1,0 +1,12 @@
+footer {
+    text-align: center;
+
+    .footer-elements {
+        align-items: center;
+
+        .theminimal-footer-el {
+            margin-bottom: $min-margin;
+        }
+    }
+    
+}
