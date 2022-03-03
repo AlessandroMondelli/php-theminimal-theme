@@ -28,7 +28,7 @@ class Sidebars {
                 'description' => __( 'Main sidebar', 'theminimal' ),
                 'before_widget' => '<div id="%1$s" class="theminimal-sidebar-widget %2$s">',
                 'after_widget' => '</div>',
-                'before_title' => '<h3 class="theminimal-widget-title>',
+                'before_title' => '<h3 class="theminimal-widget-title">',
                 'after_title' => '</h3>',
             ]
         );

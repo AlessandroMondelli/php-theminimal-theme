@@ -14,14 +14,14 @@ $footer_menu_list = wp_get_nav_menu_items( $footer_menu_id ); //Prendo voci di m
     <hr>
     <footer id="theminimal-footer" class="container-fluid page-margin">
         <div class="row">
-            <div class="col-lg-2 col-md-12 col-sm-12">
+            <div class="footer-brand-wrap col-lg-2 col-md-12 col-sm-12">
                 <?php
                     if( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
                 ?>
                         <a href="<?php echo get_home_url(); ?>"><?php the_custom_logo(); ?></a>
                 <?php
                     } else {
-                        ?> <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a> 
+                        ?> <a class="footer-brand" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a> 
                         <?php
                     }   
                 ?>

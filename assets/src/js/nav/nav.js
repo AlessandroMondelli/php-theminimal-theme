@@ -18,6 +18,14 @@ jQuery(function($) {
         $(this).siblings('.nav-link').removeClass('dropdown-hover');
     });
 
+    $(' .navbar-toggler ').click(function() {
+        if( $('.theminimal-mobile-menu').hasClass('active') ) {
+            $('.theminimal-mobile-menu').removeClass('active');
+        } else {
+            $('.theminimal-mobile-menu').addClass('active');
+        }
+    });
+
     $(window).scroll(function(){
         var hTop = $('#theminimal-header').height();
         if($(this).scrollTop() >= hTop){

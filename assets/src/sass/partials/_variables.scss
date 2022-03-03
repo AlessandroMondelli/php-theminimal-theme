@@ -32,7 +32,7 @@ $mid-margin: 50px;
 
 $page-default-margin: 35px auto 65px;
 $post-default-margin: 50px auto 50px;
-$thumbnail-margin: 0 150px 15px 0;
+$thumbnail-margin: 0 0 15px 0;
 $blockquote-margin: 15px 0 15px 0;
 
 //Paddings
@@ -64,3 +64,9 @@ $thumb-heigth: 350px;
 //Nav on scroll
 $nav-scrolled-heigth: 50px;
 $nav-scrolled-font: 14px;
+
+//Media queries
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$laptop-breakpoint: 1024px;
+$large-breakpoint: 1200px;

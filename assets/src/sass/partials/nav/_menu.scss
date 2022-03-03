@@ -4,6 +4,8 @@ header#theminimal-header {
     display: flex;
     align-items: center;
     transition: 0.2s;
+    z-index: 1000;
+    position: relative;
 
     &.scrolled {
         height: $nav-scrolled-heigth;
@@ -13,7 +15,30 @@ header#theminimal-header {
         top: 0;
         left: 0;
         right: 0;
-        z-index: 10;
+    }
+
+    .theminimal-mobile-menu {
+        position: absolute;
+        width: 100%;
+        background-color: rgb(248, 249, 250);
+        top: 110%;
+        right: 110%;
+        padding-top: $min-margin;
+        display: none;
+
+        &.active {
+            display: block;
+            right: 0%;
+        }
+
+        ul {
+            list-style-type: none;
+            color: $first-font-color;
+
+            li {
+                margin-bottom: $min-margin;
+            }
+        }
     }
 
 

@@ -25,9 +25,25 @@ $header_menu_list = wp_get_nav_menu_items( $header_menu_id ); //Prendo voci di m
     <?php
     }
     ?>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+    </button>    
+
+    <div class="theminimal-mobile-menu">
+        <ul>
+        <?php
+        if(!empty( $header_menu_list ) && is_array( $header_menu_list )) {
+            foreach($header_menu_list as $menu_item) {
+        ?>  
+                <li class="nav-item">
+                    <a href="<?php echo esc_url($menu_item->url) ?>"><?php echo esc_html($menu_item->title) ?></a>
+                </li>
+        <?php
+            }
+        } 
+        ?>
+        </ul>
+    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php
