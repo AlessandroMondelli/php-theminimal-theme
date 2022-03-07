@@ -1,8 +1,7 @@
 #theminimal-blog-posts {
 
     .theminimal-single-post {
-        display: flex;
-        align-items: baseline;
+        margin: 0 0 $mid-margin 0;
 
         .theminimal-post-thumbnail {
             margin: $thumbnail-margin;
@@ -16,6 +15,14 @@
             margin-bottom: $min-margin;
         }
         
+        .theminimal-post-content {
+            margin: $min-margin 0;
+
+            p {
+                margin: 0;
+            }
+        }
+
         .post-term {
             font-size: $secondary-size;
             font-weight: $thin;
@@ -25,11 +32,6 @@
             font-size: $secondary-size;
             color: $second-font-color;
         }
-    }
-
-    .theminimal-separator {
-        width: 30%;
-        margin: 35px auto 0;
     }
 }
 

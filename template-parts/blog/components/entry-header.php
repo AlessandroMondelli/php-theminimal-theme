@@ -30,7 +30,7 @@ $hide_title = get_post_meta( $post_id, '_hide_page_title', true ); //Verifico se
     ?>
             <div class="no-thumbnail">  
                 <a href="<?php echo esc_url( get_permalink() ) ?>">
-                    <img src="<?php echo THEMINIMAL_BUILD_IMG_URI . '/default_thumbnail.png'?>">  
+                    <img src="<?php echo THEMINIMAL_BUILD_IMG_URI . '/thumbnail.png'?>">  
                 </a>
             </div>
     <?php

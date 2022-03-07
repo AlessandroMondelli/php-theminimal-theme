@@ -2,7 +2,7 @@
 import '../sass/main.scss';
 
 //img
-import '../img/default_thumbnail.png';
+import '../img/thumbnail.png';
 
 //Nav
 import './nav/nav.js';

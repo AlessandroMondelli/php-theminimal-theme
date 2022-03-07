@@ -11,6 +11,8 @@ $first-color: #000000;
 $second-color: #666666;
 $second-color-transparent: rgba(102, 102, 102, 0.2);
 
+$font-white: #FFFFFF;
+
 $menu-color-active: rgba(0,0,0,.9);
 $menu-color-hover: $menu-color-active;
 $submenu-border-color: rgb(179, 179, 179);
@@ -59,7 +61,7 @@ $navbar-height: 65px;
 
 //Thumbnails 
 $thumb-width: 350px;
-$thumb-heigth: 350px;
+$thumb-heigth: 100%;
 
 //Nav on scroll
 $nav-scrolled-heigth: 50px;

@@ -88,7 +88,7 @@ function theminimal_excerpt_more( $read_more = '' ) { //Funzione che stampa il p
         $read_more = sprintf(
             '<span class="theminimal-read-more"><a href="%1$s">%2$s</a></span>',
             get_permalink( get_the_ID() ),
-            __('Continua a leggere', 'theminimal'),
+            __('Continua a leggere...', 'theminimal'),
         );
     }
 

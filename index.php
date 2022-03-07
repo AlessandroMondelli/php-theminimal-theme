@@ -24,20 +24,36 @@ get_header();
         }
       ?>
       <div class="row">
-        <div id="theminimal-blog-sidebar" class="col-lg-3 col-md-12 col-sm-12">
+        <div id="theminimal-blog-sidebar" class="col-lg-2 col-md-12 col-sm-12">
           <?php get_sidebar(); ?>
         </div>
-        <div id="theminimal-blog-posts" class="col-lg-9 col-md-12 col-sm-12">
+        <div id="theminimal-blog-posts" class="col-lg-10 col-md-12 col-sm-12">
       <?php
         if( have_posts() ) { //Se trovo post, con the loop mostro tutti i post
-          while( have_posts() ) : the_post();
       ?>
-              <?php
-              get_template_part( 'template-parts/blog/content' );
-      ?>
-            <hr class="theminimal-separator">
+          <div class="row">
       <?php
+          $cont = 0;
+          $new_col = false;
+          while( have_posts() ) : the_post();
+            if( $cont == 0 || $cont % 3 == 0) {
+            ?>
+              <div class="col-lg-4 col-md-12 col-sm-12">
+            <?php
+            }
+                get_template_part( 'template-parts/blog/content' );
+            
+            if( ( $cont + 1 ) % 3 == 0 ) {
+            ?>
+              </div>
+            <?php
+            }
+
+            $cont++;
           endwhile;
+      ?>
+          </div>
+      <?php
         } else { //Altrimenti richiamo template per nessun contenuto
           get_template_part( 'template-parts/blog/content-none' );  
         }
